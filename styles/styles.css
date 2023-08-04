@@ -23,7 +23,7 @@
 
 .light-mode {
   --color-primary: #FFFFFF;
-  --color-secondary: #27AE60;
+  --color-secondary: #004AAD;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -590,43 +590,63 @@ section {
 
 .contact-content-con {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 3.5rem;
 }
-.contact-content-con .left-contact {
-  flex: 2;
-}
-.contact-content-con .left-contact h4 {
-  margin-top: 1rem;
+.contact-content-con h4 {
   font-size: 2rem;
+  margin-top: 1rem;
   text-transform: uppercase;
 }
-.contact-content-con .left-contact p {
+.contact-content-con p {
   margin: 1rem 0;
   line-height: 2rem;
 }
-.contact-content-con .left-contact .contact-info .contact-item {
+.contact-content-con .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+.contact-icons {
+  margin-bottom: 20px;
+  /* debug */
+  /* border: 1px solid red; */
+}
+
+.contact-icon{
+  justify-content: center;
+  /* debug */
+  /* border: 1px solid green; */
+}
+
+/* .contact-content-con .left-contact {
+  flex: 2;
+}
+.contact-content-con .left-contact h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+} */
+.contact-content-con .contact-info .contact-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.contact-content-con .left-contact .contact-info .contact-item p {
+.contact-content-con .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
-.contact-content-con .left-contact .contact-info .contact-item .icon {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-}
-.contact-content-con .left-contact .contact-info .contact-item .icon i {
+.contact-content-con .contact-info .contact-item .icon i {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
 }
-.contact-content-con .left-contact .contact-icon {
+.contact-content-con .contact-icon {
   display: flex;
   margin-top: 2rem;
 }
-.contact-content-con .left-contact .contact-icon a {
+.contact-content-con .contact-icon a {
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -639,26 +659,26 @@ section {
   margin: 0 0.4rem;
   transition: all 0.4s ease-in-out;
 }
-.contact-content-con .left-contact .contact-icon a:hover {
+.contact-content-con .contact-icon a:hover {
   background-color: var(--color-secondary);
 }
-.contact-content-con .left-contact .contact-icon a:hover i {
+.contact-content-con .contact-icon a:hover i {
   color: var(--color-primary);
 }
-.contact-content-con .left-contact .contact-icon a i {
+.contact-content-con .contact-icon a i {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
 }
-.contact-content-con .right-contact {
+.contact-content-con {
   flex: 3;
   margin-left: 3rem;
 }
-.contact-content-con .right-contact .input-control {
+.contact-content-con .input-control {
   margin: 1.5rem 0;
 }
-.contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
+.contact-content-con .input-control input, .contact-content-con .input-control textarea {
   border-radius: 30px;
   font-weight: inherit;
   font-size: inherit;
@@ -671,13 +691,13 @@ section {
   color: var(--color-white);
   resize: none;
 }
-.contact-content-con .right-contact .i-c-2 {
+.contact-content-con .i-c-2 {
   display: flex;
 }
-.contact-content-con .right-contact .i-c-2 :last-child {
+.contact-content-con .i-c-2 :last-child {
   margin-left: 1.5rem;
 }
-.contact-content-con .right-contact .submit-btn {
+.contact-content-con .submit-btn {
   display: flex;
   justify-content: flex-start;
 }
@@ -824,6 +844,10 @@ section {
     margin: 1rem 0.3rem;
   }
 
+  .about .main-title {
+    margin: 2.5rem 0;
+  }
+
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -851,10 +875,17 @@ section {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  #portfolio .main-title {
+    margin: 2.5rem 0;
+  }
   .portfolios {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem 6rem 1rem;
     padding-bottom: 6rem;
     margin-top: 1rem;
+    /* width: 100%; */
+    /* debug */
+    /* border: 1px solid red; */
   }
 
   .blogs {
@@ -865,21 +896,21 @@ section {
   .contact-content-con {
     flex-direction: column;
   }
-  .contact-content-con .right-contact {
+  .contact-content-con {
     margin-left: 0;
     margin-top: 2.5rem;
   }
 
-  .contact-content-con .right-contact .i-c-2 {
+  .contact-content-con .i-c-2 {
     flex-direction: column;
   }
 
-  .contact-content-con .right-contact .i-c-2 :last-child {
+  .contact-content-con .i-c-2 :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
   }
 
-  .contact-content-con .right-contact {
+  .contact-content-con {
     margin-bottom: 6rem;
   }
 
@@ -912,6 +943,7 @@ section {
   }
   .slider {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 1432px) {
@@ -922,21 +954,21 @@ section {
   .contact-content-con {
     flex-direction: column;
   }
-  .contact-content-con .right-contact {
+  .contact-content-con {
     margin-left: 0;
     margin-top: 2.5rem;
   }
 
-  .contact-content-con .right-contact .i-c-2 {
+  .contact-content-con .i-c-2 {
     flex-direction: column;
   }
 
-  .contact-content-con .right-contact .i-c-2 :last-child {
+  .contact-content-con .i-c-2 :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
   }
 
-  .contact-content-con .right-contact {
+  .contact-content-con {
     margin-bottom: 6rem;
   }
 
