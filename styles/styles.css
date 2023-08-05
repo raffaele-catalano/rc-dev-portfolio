@@ -780,7 +780,11 @@ section {
 
 /*  */
 /*  */
+/*  */
+/*  */
 /* MEDIA QUERY */
+/*  */
+/*  */
 /*  */
 /*  */
 
@@ -878,6 +882,7 @@ section {
   #portfolio .main-title {
     margin: 2.5rem 0;
   }
+
   .portfolios {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 1rem 6rem 1rem;
@@ -888,9 +893,13 @@ section {
     /* border: 1px solid red; */
   }
 
-  .blogs {
+  /* .blogs {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
+  } */
+
+  .contact .main-title {
+    margin: 2.5rem 0;
   }
 
   .contact-content-con {
