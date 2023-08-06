@@ -955,7 +955,7 @@ section {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1432px) {
+@media screen and (max-width: 1440px) {
   .container {
     padding: 7rem 11rem;
   }
