@@ -66,6 +66,10 @@ section {
   padding: 3rem 18rem;
 }
 
+.justify {
+  text-align: justify;
+}
+
 .container {
   display: none;
   transform: translateY(-100%) scale(0);
