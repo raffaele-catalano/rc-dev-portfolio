@@ -25,12 +25,19 @@
                 </div>
             </div>
             <div class="right-header">
-                <h1 class="name">
+                <h1 class="name" data-lang="en">
                     Hi, I'm <span>Raffaele Catalano.</span><br>
                     A Jr. Full Stack Web Developer.
                 </h1>
-                <p>
+                <h1 class="name" data-lang="it" style="display:none;">
+                    Ciao,<br>sono <span>Raffaele Catalano.</span><br>
+                    Jr. Full Stack Web Developer.
+                </h1>
+                <p data-lang="en">
                     This is my Portfolio, just relax, take a cup of coffee and navigate it !
+                </p>
+                <p data-lang="it" style="display:none;">
+                    Questo è il mio Portfolio, rilassati, gustati un caffè e fatti un giro !
                 </p>
                 <!-- <div class="btn-con">
                     <a href="" class="main-btn">
@@ -44,13 +51,18 @@
     <main>
         <section class="container about" id="about">
             <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my skills</span></h2>
+                <h2 data-lang="en">About <span>me</span><span class="bg-text">my skills</span></h2>
+                <h2 data-lang="it" style="display:none;">Chi <span>sono</span><span class="bg-text">le mie skills</span></h2>
             </div>
             <div class="about-container">
                 <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p class="justify">
+                    <h4 data-lang="en">Information About me</h4>
+                    <h4 data-lang="it">Informazioni su di me</h4>
+                    <p class="justify" data-lang="en">
                         Hello there, I'm Raffaele, 33 years old, and I'm a true enthusiast of technology, sports, and music. If there's one thing that sets me apart, it's my tenacity in pursuing my dreams and the patience to overcome obstacles along the way. I thrive on pushing my limits and taking on challenges because I believe that's how extraordinary accomplishments are achieved. Moreover, I love sharing my knowledge with others and hope it can somehow contribute positively to the world we live in. When things get tough, I manage to stay composed and focused, always striving to empathize with the people around me. I firmly believe that each of us has a unique role to play in this grand puzzle of life, and I aspire to be a valuable piece in this journey.
+                    </p>
+                    <p class="justify" data-lang="it" style="display:none;">
+                        Ciao a tutti, sono Raffaele, ho 33 anni e sono un appassionato di tecnologia, sport e musica. Se c'è una cosa che mi contraddistingue, è la mia tenacia nel perseguire i miei sogni e la pazienza nel superare gli ostacoli lungo il percorso. Mi entusiasma spingere i miei limiti e affrontare sfide perché credo che sia così che si raggiungono risultati straordinari. Inoltre, amo condividere le mie conoscenze con gli altri e spero che possa contribuire in modo positivo al mondo in cui viviamo. Quando le cose si fanno difficili, riesco a mantenere la calma e la concentrazione, cercando sempre di comprendere le persone che mi circondano. Credo fermamente che ognuno di noi abbia un ruolo unico da svolgere in questo grande puzzle della vita, e ambisco a essere un elemento prezioso in questo cammino.
                     </p>
                     <!-- <div class="btn-con">
                         <a href="#" class="main-btn">
@@ -63,31 +75,36 @@
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">700+</p>
-                            <p class="small-text">Hours of <br /> Learning</p>
+                            <p class="small-text" data-lang="en">Hours of <br /> Learning</p>
+                            <p class="small-text" data-lang="it" style="display:none;">Ore di <br /> Apprendimento</p>
                         </div>
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">3+</p>
-                            <p class="small-text">Coffees in <br /> a day</p>
+                            <p class="small-text" data-lang="en">Coffees in <br /> a day</p>
+                            <p class="small-text" data-lang="it" style="display:none;">Caffè al <br /> giorno</p>
                         </div>
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">1200+</p>
-                            <p class="small-text">Commits in <br /> Six Months</p>
+                            <p class="small-text" data-lang="en">Commits in <br /> Six Months</p>
+                            <p class="small-text" data-lang="it" style="display:none;">Commits in <br /> Sei Mesi</p>
                         </div>
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">100+</p>
-                            <p class="small-text">Reasons for <br /> hiring me</p>
+                            <p class="small-text" data-lang="en">Reasons for <br /> hiring me</p>
+                            <p class="small-text" data-lang="it" style="display:none;">Ragioni per <br /> assumermi</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
+                <h4 class="stat-title" data-lang="en">My Skills</h4>
+                <h4 class="stat-title" data-lang="it" style="display:none;">Le mie Skills</h4>
                 <div class="language-skill">
                     <div class="slider">
                         <div class="slide-track">
@@ -131,10 +148,14 @@
         </section>
         <section class="container" id="portfolio">
             <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+                <h2 data-lang="en">My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+                <h2 data-lang="it" style="display:none;">Il mio <span>Portfolio</span><span class="bg-text">I miei Lavori</span></h2>
             </div>
-            <p class="port-text">
+            <p class="port-text" data-lang="en">
                 Here is some of my work that I've done in various programming languages.
+            </p>
+            <p class="port-text" data-lang="it" style="display:none;">
+                Qui trovi alcuni dei miei lavori svolti in diversi linguaggi di programmazione.
             </p>
             <div class="portfolios">
                 <div class="portfolio-item">
@@ -300,22 +321,30 @@
         <section class="container contact" id="contact">
             <div class="contact-container">
                 <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">My Infos</span></h2>
+                    <h2 data-lang="en">Contact <span>Me</span><span class="bg-text">My Infos</span></h2>
+                    <h2 data-lang="it" style="display:none;">I miei <span>Contatti</span><span class="bg-text">Le mie Info</span></h2>
                 </div>
                 <div class="contact-content-con">
                     <div class="left-contact">
                         <h4>Info & Social</h4>
-                        <p>
+                        <p data-lang="en">
                             Here some information about me and how to reach me through email and/or social.
+                        </p>
+                        <p data-lang="it" style="display:none;">
+                            Alcune informazioni su di me e su come contattarmi tramite email e/o tramite social.
                         </p>
                         <div class="contact-info">
                             <div class="contact-item">
                                 <div class="icon">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
+                                    <span data-lang="en">Location</span>
+                                    <span data-lang="it" style="display:none;">Posizione</span>
                                 </div>
-                                <p>
+                                <p data-lang="en">
                                     : Napoli, Italy
+                                </p>
+                                <p data-lang="it" style="display:none;">
+                                    : Napoli, Campania, Italia
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -348,10 +377,12 @@
                             <div class="contact-item">
                                 <div class="icon">
                                     <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
+                                    <span data-lang="en">Languages</span>
+                                    <span data-lang="it" style="display:none;">Lingue</span>
                                 </div>
                                 <p>
-                                    <span>: Italian, Spanish, English</span>
+                                    <span data-lang="en">: Italian, Spanish, English</span>
+                                    <span data-lang="it" style="display:none;">: Italiano, Spagnolo, Inglese</span>
                                 </p>
                             </div>
                         </div>
@@ -375,7 +406,8 @@
                         </div>
                         <div class="submit-btn">
                             <a href="#" class="main-btn">
-                                <span class="btn-text">Download CV</span>
+                                <span class="btn-text" data-lang="en">Download CV</span>
+                                <span class="btn-text" data-lang="it" style="display:none;">Scarica CV</span>
                                 <span class="btn-icon"><i class="fas fa-download"></i></span>
                             </a>
                         </div>
@@ -405,7 +437,7 @@
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
-    <div class="lang-btn">
+    <div class="lang-btn" id="lang-toggle">
         <i class="fas fa-language"></i>
     </div>
 
@@ -476,6 +508,29 @@
 
         link.click();
     });
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const langToggle = document.getElementById("lang-toggle");
+            const englishElements = document.querySelectorAll('[data-lang="en"]');
+            const italianElements = document.querySelectorAll('[data-lang="it"]');
+
+            let isEnglish = true;
+
+            langToggle.addEventListener("click", function () {
+                if (isEnglish) {
+                    englishElements.forEach(element => element.style.display = "none");
+                    italianElements.forEach(element => element.style.display = "block");
+                } else {
+                    englishElements.forEach(element => element.style.display = "block");
+                    italianElements.forEach(element => element.style.display = "none");
+                }
+
+                isEnglish = !isEnglish;
+            });
+        });
 
     </script>
 
