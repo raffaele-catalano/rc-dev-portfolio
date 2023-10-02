@@ -822,10 +822,13 @@ section {
   }
 
   .theme-btn {
+    top: 1.4%;
     width: 50px;
     height: 50px;
   }
   .lang-btn {
+    top: 1.4%;
+    left: 3%;
     width: 50px;
     height: 50px;
   }
