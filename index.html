@@ -404,10 +404,15 @@
                                 </a> -->
                             </div>
                         </div>
-                        <div class="submit-btn">
+                        <div class="submit-btn" data-lang="en">
                             <a href="#" class="main-btn">
-                                <span class="btn-text" data-lang="en">Download CV</span>
-                                <span class="btn-text" data-lang="it" style="display:none;">Scarica CV</span>
+                                <span class="btn-text">Download CV</span>
+                                <span class="btn-icon"><i class="fas fa-download"></i></span>
+                            </a>
+                        </div>
+                        <div class="submit-btn" data-lang="it" style="display:none;">
+                            <a href="#" class="main-btn">
+                                <span class="btn-text">Scarica CV</span>
                                 <span class="btn-icon"><i class="fas fa-download"></i></span>
                             </a>
                         </div>
@@ -486,28 +491,30 @@
     </script>
     <!--  -->
     <script>
-    document.querySelector('.main-btn').addEventListener('click', function(e) {
+        document.querySelectorAll('.main-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
 
-        e.preventDefault();
+                const isDarkMode = document.body.classList.contains('light-mode') ? false : true;
+                const lang = this.closest('.submit-btn').getAttribute('data-lang');
+                const fileTheme = this.getAttribute('data-file');
 
-        const isDarkMode = document.body.classList.contains('light-mode') ? false : true;
+                let fileName;
+                if (isDarkMode) {
+                    fileName = fileTheme === 'RC_CV' ? `RC_CV_${lang}_Light.pdf` : `RC_CV_${lang}_Dark.pdf`;
+                } else {
+                    fileName = fileTheme === 'RC_CV' ? `RC_CV_${lang}_Dark.pdf` : `RC_CV_${lang}_Light.pdf`;
+                }
 
-        const fileTheme = this.getAttribute('data-file');
+                const link = document.createElement('a');
+                link.href = '/docs/' + fileName;
+                link.download = fileName;
+                link.target = '_blank';
 
-        let fileName;
-        if (isDarkMode) {
-            fileName = fileTheme === 'dark' ? 'RC_CV_Light.pdf' : 'RC_CV_Dark.pdf';
-        } else {
-            fileName = fileTheme === 'dark' ? 'RC_CV_Dark.pdf' : 'RC_CV_Light.pdf';
-        }
+                link.click();
+            });
+        });
 
-        const link = document.createElement('a');
-        link.href = '/docs/' + fileName;
-        link.download = fileName;
-        link.target = '_blank';
-
-        link.click();
-    });
 
     </script>
 
