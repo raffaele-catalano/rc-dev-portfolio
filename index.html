@@ -446,100 +446,16 @@
         <i class="fas fa-language"></i>
     </div>
 
-    <!-- SCRIPT -->
+    <!-- ******************************************** -->
+
     <script src="app.js"></script>
 
-    <script>
-        
-    const slideTrack = document.querySelector('.slide-track');
-    let slideIndex = 0;
-    const slideWidth = document.querySelector('.slide').clientWidth;
-    const slides = document.querySelectorAll('.slide');
-
-    function autoScroll() {
-        slideIndex++;
-        slideTrack.style.transition = "transform 2s linear";
-        slideTrack.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
-
-        slideTrack.addEventListener('transitionend', function () {
-        if (slideIndex >= slides.length - 1) {
-            slideIndex = 0;
-            slideTrack.style.transition = "none";
-            slideTrack.style.transform = `translateX(0)`;
-            }
-        });
-    }
-
-    setInterval(autoScroll, 4000);
-    </script>
-    <!--  -->
-    <script>
-        function cloneIcons() {
-            const slideTrack = document.querySelector('.slide-track');
-            const slides = document.querySelectorAll('.slide');
+    <script src="./js/techSlider.js"></script>
     
-            slides.forEach(slide => {
-                slideTrack.appendChild(slide.cloneNode(true));
-            });
+    <script src="./js/langSwitch.js"></script>
 
-            slideTrack.style.animation = "none";
-            void slideTrack.offsetWidth;
-            slideTrack.style.animation = "scroll 40s linear infinite";
-        }
-
-        cloneIcons();
-    </script>
-    <!--  -->
-    <script>
-        document.querySelectorAll('.main-btn').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const isDarkMode = document.body.classList.contains('light-mode') ? false : true;
-                const lang = this.closest('.submit-btn').getAttribute('data-lang');
-                const fileTheme = this.getAttribute('data-file');
-
-                let fileName;
-                if (isDarkMode) {
-                    fileName = fileTheme === 'RC_CV' ? `RC_CV_${lang}_Light.pdf` : `RC_CV_${lang}_Dark.pdf`;
-                } else {
-                    fileName = fileTheme === 'RC_CV' ? `RC_CV_${lang}_Dark.pdf` : `RC_CV_${lang}_Light.pdf`;
-                }
-
-                const link = document.createElement('a');
-                link.href = '/docs/' + fileName;
-                link.download = fileName;
-                link.target = '_blank';
-
-                link.click();
-            });
-        });
-
-
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const langToggle = document.getElementById("lang-toggle");
-            const englishElements = document.querySelectorAll('[data-lang="en"]');
-            const italianElements = document.querySelectorAll('[data-lang="it"]');
-
-            let isEnglish = true;
-
-            langToggle.addEventListener("click", function () {
-                if (isEnglish) {
-                    englishElements.forEach(element => element.style.display = "none");
-                    italianElements.forEach(element => element.style.display = "block");
-                } else {
-                    englishElements.forEach(element => element.style.display = "block");
-                    italianElements.forEach(element => element.style.display = "none");
-                }
-
-                isEnglish = !isEnglish;
-            });
-        });
-
-    </script>
+    <script src="./js/downloadCV.js"></script>
 
 </body>
+
 </html>
