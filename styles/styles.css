@@ -517,7 +517,7 @@ section {
   top: 0;
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   opacity: 0;
@@ -527,12 +527,17 @@ section {
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
   color: var(--color-primary);
-  margin-bottom: 1.5rem;
+  margin: 4px 0;
+    /* debug */
+    /* border: 1px solid red; */
 }
 .portfolios .portfolio-item .hover-items .icons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 18px;
+  /* debug */
+  /* border: 1px solid red; */
 }
 .portfolios .portfolio-item .hover-items .icons .icon {
   background-color: var(--color-primary);
@@ -557,6 +562,24 @@ section {
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
   color: var(--color-primary);
 }
+
+.portfolios .portfolio-item .hover-items .technologies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 3px;
+  /* debug */
+  /* border: 1px solid red; */
+}
+
+.portfolios .portfolio-item .hover-items .technologies img {
+  width: 45px;
+  height: 45px;
+  margin: 0 1.5px;
+}
+
 
 .portfolio-item:hover .hover-items {
   opacity: 1;
